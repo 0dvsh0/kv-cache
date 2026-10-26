@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-10-26",
+  "assumptions": {
+    "kv_dtype": "FP16",
+    "batch_size": 1,
+    "weights": "excluded",
+    "context": "advertised window"
+  },
+  "models": [
+    {
+      "name": "GLM-4.6",
+      "context": 200000,
+      "layers": 92,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "attention": "gqa",
+      "kv_gb": 75.37,
+      "kv_kb_per_token": 376.8,
+      "source": "https://huggingface.co/zai-org/GLM-4.6",
+      "note": "200K advertised, standard GQA"
+    },
+    {
+      "name": "Llama 3.1 70B",
+      "context": 128000,
+      "layers": 80,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "attention": "gqa",
+      "kv_gb": 41.94,
+      "kv_kb_per_token": 327.7,
+      "source": "https://huggingface.co/NousResearch/Meta-Llama-3.1-70B-Instruct",
+      "note": "128K advertised, GQA"
+    },
+    {
+      "name": "Llama 3.1 8B",
+      "context": 128000,
+      "layers": 32,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "attention": "gqa",
+      "kv_gb": 16.78,
+      "kv_kb_per_token": 131.1,
+      "source": "https://huggingface.co/unsloth/Llama-3.1-8B-Instruct",
+      "note": "128K advertised, GQA"
+    },
+    {
+      "name": "Gemma 3 27B",
+      "context": 128000,
+      "layers": 62,
+      "kv_heads": 16,
+      "head_dim": 128,
+      "attention": "hybrid",
+      "kv_gb": 10.92,
+      "kv_kb_per_token": 81.9,
+      "source": "https://huggingface.co/unsloth/gemma-3-27b-it",
+      "note": "128K advertised, 5 local : 1 global"
+    },
+    {
+      "name": "Qwen3 32B",
+      "context": 40960,
+      "layers": 64,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "attention": "gqa",
+      "kv_gb": 10.74,
+      "kv_kb_per_token": 262.1,
+      "source": "https://huggingface.co/Qwen/Qwen3-32B",
+      "note": "40K advertised, GQA"
+    },
+    {
+      "name": "Qwen2.5 72B",
+      "context": 32768,
+      "layers": 80,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "attention": "gqa",
+      "kv_gb": 10.74,
+      "kv_kb_per_token": 327.7,
+      "source": "https://huggingface.co/Qwen/Qwen2.5-72B-Instruct",
+      "note": "32K advertised, GQA"
+    },
+    {
+      "name": "OLMo 3 7B",
+      "context": 65536,
+      "layers": 32,
+      "kv_heads": 32,
+      "head_dim": 128,
+      "attention": "hybrid",
+      "kv_gb": 10.2,
+      "kv_kb_per_token": 131.1,
+      "source": "https://huggingface.co/allenai/Olmo-3-7B-Instruct",
+      "note": "64K advertised, 3 local : 1 global"
+    },
+    {
+      "name": "DeepSeek V3.1",
+      "context": 128000,
+      "layers": 61,
+      "kv_heads": 128,
+      "head_dim": 128,
+      "attention": "mla",
+      "kv_gb": 8.99,
+      "kv_kb_per_token": 70.3,
+      "source": "https://huggingface.co/deepseek-ai/DeepSeek-V3.1",
+      "note": "128K advertised, MLA"
+    },
+    {
+      "name": "Kimi K2",
+      "context": 128000,
+      "layers": 61,
+      "kv_heads": 64,
+      "head_dim": 128,
+      "attention": "mla",
+      "kv_gb": 8.99,
+      "kv_kb_per_token": 70.3,
+      "source": "https://huggingface.co/moonshotai/Kimi-K2-Instruct",
+      "note": "128K advertised, MLA"
+    },
+    {
+      "name": "Mistral Small 24B",
+      "context": 32768,
+      "layers": 40,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "attention": "gqa",
+      "kv_gb": 5.37,
+      "kv_kb_per_token": 163.8,
+      "source": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501",
+      "note": "32K advertised, GQA"
+    },
+    {
+      "name": "GPT-OSS 120B",
+      "context": 128000,
+      "layers": 36,
+      "kv_heads": 8,
+      "head_dim": 64,
+      "attention": "hybrid",
+      "kv_gb": 4.72,
+      "kv_kb_per_token": 36.9,
+      "source": "https://huggingface.co/openai/gpt-oss-120b",
+      "note": "128K advertised, alternating local/global"
+    }
+  ]
+}

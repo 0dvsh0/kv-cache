@@ -1,0 +1,12 @@
+model,context,kv_gb_fp16,kv_kb_per_token,attention,source
+GLM-4.6,200000,75.37,376.8,gqa,https://huggingface.co/zai-org/GLM-4.6
+Llama 3.1 70B,128000,41.94,327.7,gqa,https://huggingface.co/NousResearch/Meta-Llama-3.1-70B-Instruct
+Llama 3.1 8B,128000,16.78,131.1,gqa,https://huggingface.co/unsloth/Llama-3.1-8B-Instruct
+Gemma 3 27B,128000,10.92,81.9,hybrid,https://huggingface.co/unsloth/gemma-3-27b-it
+Qwen3 32B,40960,10.74,262.1,gqa,https://huggingface.co/Qwen/Qwen3-32B
+Qwen2.5 72B,32768,10.74,327.7,gqa,https://huggingface.co/Qwen/Qwen2.5-72B-Instruct
+OLMo 3 7B,65536,10.20,131.1,hybrid,https://huggingface.co/allenai/Olmo-3-7B-Instruct
+DeepSeek V3.1,128000,8.99,70.3,mla,https://huggingface.co/deepseek-ai/DeepSeek-V3.1
+Kimi K2,128000,8.99,70.3,mla,https://huggingface.co/moonshotai/Kimi-K2-Instruct
+Mistral Small 24B,32768,5.37,163.8,gqa,https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501
+GPT-OSS 120B,128000,4.72,36.9,hybrid,https://huggingface.co/openai/gpt-oss-120b
