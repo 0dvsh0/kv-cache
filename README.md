@@ -40,13 +40,14 @@ That is why architecture matters more than parameter count:
 - **MLA** caches a compressed latent plus a RoPE key instead of full K and V. DeepSeek V3.1 and Kimi K2 use it, which keeps 128k under 9 GB.
 - **Hybrid attention** keeps most layers on a small sliding window and only a few layers at full context. GPT-OSS 120B uses 18 full layers out of 36, so its 128k cache is 4.7 GB.
 
-A 200k context window on GLM-4.6 costs 75.4 GB of FP16 cache for one conversation. That is almost an entire 80 GB GPU before the 357B parameters are loaded. A 128k window on GPT-OSS 120B costs 4.7 GB. Same feature, very different bill.
+A 200k context window on GLM-4.6 costs 75.4 GB of FP16 cache for one conversation. That is almost an entire 80 GB GPU before any weights are loaded. A 128k window on GPT-OSS 120B costs 4.7 GB. Same feature, very different bill.
 
 ![Quantization compared](quant_vs_kv.png)
 
 ## Caveats
 
 - FP16 is 2 bytes per element. FP8 and INT8 are 1 byte and halve the cache.
+- 4-bit weight sizes are payload math at 0.5 bytes per parameter. Real quantized files carry scales and metadata, so they are larger. That makes the cache comparison worse, not better.
 - Weights, activations, CUDA graphs, allocator fragmentation, and scheduler overhead are excluded.
 - Tensor parallel divides the cache evenly in this calculator. Real sharding depends on KV head count and the serving engine.
 - Advertised context is not a promise of usable context at every batch size or every engine.
